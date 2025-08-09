@@ -182,7 +182,7 @@ Detailed information for how each script works is given in the `DESCRIPTION` tex
 - Because of similarities between WAS v9 and WAS v8.5.5, the scripts can easily be adapted to create a WAS v8.5.5 cell as well.
 
 
-### TO-DO List
+### TO-DO:
 There are many improvements to the scripts that can be made, too numerous to list here, but here are some suggestions:
 
 - The scripts could benefit by leveraging automation tools such as *Ansible Playbooks* as well as being adapted for newer Linux platforms.
