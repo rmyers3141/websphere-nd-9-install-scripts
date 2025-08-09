@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<agent-input>
+  <variables>
+    <variable name='sharedLocation' value='/apps/IBM/IMShared'/>
+    <variable name='wasRepo' value='https://repo.iim.test/repo/composite/'/>
+    <variable name='wasPath' value='/apps/IBM/WebSphere/AppServer'/>
+  </variables>
+  <server>
+    <repository location='${wasRepo}'/>
+  </server>
+  <profile id='IBM WebSphere Application Server V9.0' installLocation='${wasPath}'>
+    <data key='cic.selector.arch' value='x86_64'/>
+  </profile>
+  <install>
+    <!-- IBM WebSphere Application Server Network Deployment  9.0.0.4 -->
+    <offering profile='IBM WebSphere Application Server V9.0' id='com.ibm.websphere.ND.v90' version='9.0.4.20170523_1327' features='core.feature,ejbdeploy,thinclient,embeddablecontainer'/>
+    <!-- IBM SDK, Java Technology Edition, Version 8 8.0.4.7 -->
+    <offering profile='IBM WebSphere Application Server V9.0' id='com.ibm.java.jdk.v8' version='8.0.4070.20170629_1222' features='com.ibm.sdk.8'/>
+  </install>
+  <preference name='com.ibm.cic.common.core.preferences.eclipseCache' value='${sharedLocation}'/>
+  <preference name='offering.service.repositories.areUsed' value='false'/>
+  <preference name='com.ibm.cic.common.core.preferences.ssl.nonsecureMode' value='true'/>
+  <preference name='com.ibm.cic.common.core.preferences.preserveDownloadedArtifacts' value='false'/>
+</agent-input>
